@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    width: 100vw;
+    font-family: poppins;
+    font-size: 18px;
+    padding: 10px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+ .navbar a:hover {
+    background-color: rgba(5, 5, 5, 0.114);
+    border-radius: 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .bars-icon {
+    display: none;
+    font-size: 24px;
+}
+
+.navbar .menu-toggle {
+    display: none;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 40px;
+    padding: 0px 40px;
+}
+
+.navbar .icons {
+    display: flex;
+    gap: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar .nav-links {
+        gap: 20px;
+        padding: 0px 20px;
+    }
+
+    .navbar .icons {
+        gap: 20px;
+        padding: 0px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px 15px 15px 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .bars-icon {
+        display: block;
+        /* Show bars icon on smaller screens */
+        position: absolute;
+        right: 20px;
+        /* Position it on the right side of the navbar */
+        top: 15px;
+        padding: 5px;
+    }
+
+    .navbar .bars-icon:hover {
+        background-color: rgba(5, 5, 5, 0.114);
+        border-radius: 10px;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navbar .icons {
+        display: none;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .menu-toggle:checked~.nav-links,
+    .menu-toggle:checked~.icons {
+        display: flex;
+        /* Show nav-links and icons when the checkbox is checked */
+    }
+
+    .navbar .nav-links {
+        gap: 20px;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+
+    .navbar .icons {
+        gap: 20px;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px 10px 10px 10px;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .navbar .nav-links {
+        gap: 10px;
+        padding: 8px 0;
+    }
+
+    .navbar .nav-links a {
+        font-size: 14px;
+    }
+
+    .navbar .icons {
+        gap: 10px;
+        padding: 8px 0;
+    }
+}
